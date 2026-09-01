@@ -17,6 +17,7 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    overflowY: 'auto',
 };
 
 function Edit() {
@@ -41,13 +42,13 @@ function Edit() {
                             <h3>Personal Details</h3>
                             <div>
                                 <div>
-                                    <TextField id="standard-basic" label="Full Name" variant="standard" />
+                                    <TextField id="standard-basic" label="Full Name" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Job Title" variant="standard" />
+                                    <TextField id="standard-basic" label="Job Title" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Location" variant="standard" />
+                                    <TextField id="standard-basic" label="Location" variant="standard" className='w-100'/>
                                 </div>
 
 
@@ -58,19 +59,19 @@ function Edit() {
                             <h3>Contact Details</h3>
                             <div>
                                 <div>
-                                    <TextField id="standard-basic" label="Email" variant="standard" />
+                                    <TextField id="standard-basic" label="Email" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Phone" variant="standard" />
+                                    <TextField id="standard-basic" label="Phone" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Github Link" variant="standard" />
+                                    <TextField id="standard-basic" label="Github Link" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="LinkedIn Link" variant="standard" />
+                                    <TextField id="standard-basic" label="LinkedIn Link" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Portfolio Link" variant="standard" />
+                                    <TextField id="standard-basic" label="Portfolio Link" variant="standard" className='w-100' />
                                 </div>
                             </div>
                         </div>
@@ -78,16 +79,16 @@ function Edit() {
                             <h3>Education Details</h3>
                             <div>
                                 <div>
-                                    <TextField id="standard-basic" label="Course" variant="standard" />
+                                    <TextField id="standard-basic" label="Course" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="College" variant="standard" />
+                                    <TextField id="standard-basic" label="College" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="University" variant="standard" />
+                                    <TextField id="standard-basic" label="University" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Passout Year" variant="standard" />
+                                    <TextField id="standard-basic" label="Passout Year" variant="standard" className='w-100'/>
                                 </div>
 
                             </div>
@@ -96,16 +97,16 @@ function Edit() {
                             <h3>Professional Details</h3>
                             <div>
                                 <div>
-                                    <TextField id="standard-basic" label="Job or Internship" variant="standard" />
+                                    <TextField id="standard-basic" label="Job or Internship" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Company Name" variant="standard" />
+                                    <TextField id="standard-basic" label="Company Name" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Company Location" variant="standard" />
+                                    <TextField id="standard-basic" label="Company Location" variant="standard" className='w-100'/>
                                 </div>
                                 <div>
-                                    <TextField id="standard-basic" label="Duration" variant="standard" />
+                                    <TextField id="standard-basic" label="Duration" variant="standard" className='w-100'/>
                                 </div>
 
                             </div>

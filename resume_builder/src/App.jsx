@@ -7,6 +7,8 @@ import ResumeGenerator from './pages/ResumeGenerator'
 import History from './pages/History'
 import UserForm from './pages/UserForm'
 import Pnf from './pages/Pnf'
+import ViewResume from './pages/ViewResume'
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <Route path='/resume' element={<ResumeGenerator/>}/>
       <Route path='/form' element={<UserForm/>}/>
       <Route path='/history' element={<History/>}/>
+      <Route path='/resume/:id/view' element={<ViewResume/>}></Route>
 
       <Route path='/*' element={<Pnf/>}/>
     </Routes>
