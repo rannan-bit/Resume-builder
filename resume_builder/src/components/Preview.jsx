@@ -10,35 +10,40 @@ import { FaHistory } from "react-icons/fa";
 import { TbPlayerTrackPrevFilled } from "react-icons/tb";
 import Edit from './Edit';
 
-function Preview() {
+
+
+function Preview({resumeData}) {
+    console.log(resumeData);
+    
     return (
         <div>
             
             <Box component="section" >
                 <Paper elevation={3} sx={{ p: 2, textAlign: 'center' }}>
-                    <h2>Name</h2>
-                    <h6>Job Title</h6>
+                    <h2>{resumeData.fullName}</h2>
+                    <h6>{resumeData.job}</h6>
 
-                    <p><span>Location</span>||<span>Email</span>||<span>Phone</span></p>
+                    <p><span>{resumeData.location}</span>||<span>{resumeData.email}</span>||<span>{resumeData.phone}</span></p>
 
-                    <p><Link>Github</Link>|<Link>Linkedin</Link></p>
+                    <p><Link>{resumeData.github}</Link>|<Link>{resumeData.linkedin}</Link></p>
 
                     <Divider sx={{ fontSize: '23px', fontWeight: 'Bold' }}>Summmary</Divider>
 
-                    <p>User Summary</p>
+                    <p>{resumeData.summary}</p>
 
                     <Divider sx={{ fontSize: '23px', fontWeight: 'Bold' }}>Eduction</Divider>
                     <h6>User Education</h6>
-                    <p><span>college</span>||<span>University</span>||<span>Passout Year</span></p>
+                    <p><span>{resumeData.degree}</span>||<span>{resumeData.university}</span>||<span>{resumeData.passout}</span></p>
 
-                    <Divider sx={{ fontSize: '23px', fontWeight: 'Bold' }}>Proffesional Experience</Divider>
-                    <h6>User Job</h6>
-                    <p><span>Company</span>||<span>Location</span>||<span>Duration</span></p>
+                    
 
 
                     <Divider sx={{ fontSize: '23px', fontWeight: 'Bold' }}>Skills</Divider>
-                    <Stack direction="row" spacing={2} sx={{ flexWrap: 'wrap', gap: '8px' }}>
-                        <Button variant="contained">Contained</Button>
+                    <Stack direction="row"
+                     sx={{ flexWrap: 'wrap', gap: '8px' }}>
+                        {resumeData.skills.map(skill=>(
+                            <Button variant='contained'>{skill}</Button>
+                        ))}
 
                     </Stack>
 

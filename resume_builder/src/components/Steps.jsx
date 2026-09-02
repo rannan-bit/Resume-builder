@@ -14,27 +14,16 @@ import { Link } from '@mui/material';
 import jobType from '../assets/jobRole.json'
 import jobSkills from '../assets/jobSkills.json'
 import summaries from '../assets/summaries.json'
+import { addResumeAPI } from '../services/allAPI';
+
 
 
 
 const steps = ['Basic Information', 'Contact Details', 'Education Details', 'Review & Submit'];
 
-function Steps() {
+function Steps({setResumeData,resumeData}) {
     const [activeStep, setActiveStep] = React.useState(0);
-    const [resumeData,setResumeData]=useState({
-        fullName:"",
-        job:"",
-        location:"",
-        email:"",
-        phone:"",
-        github:"",
-        linkedin:"",
-        degree:"",
-        university:"",
-        passout:"",
-        skills:[],
-        summary:""
-    })
+    
 
     const handleNext = () => {
         
@@ -53,6 +42,19 @@ function Steps() {
         })
         handleNext()
 
+    }
+
+    const addResume=async()=>{
+        const {fullName,job,location,email,phone,linkedin,github,degree,university,passout,skills,summary}=resumeData
+        if(fullName&&job&&location&&email&&phone&&linkedin&&github&&degree&&university&&passout&&skills.length>0&&summary){
+            // api call
+            const response=await addResumeAPI(resumeData)
+            console.log(response);
+            
+        }
+        else{
+            alert("fill the fields completely")
+        }
     }
 
     const previousActiveStepRef = React.useRef(activeStep);
@@ -144,7 +146,6 @@ function Steps() {
             default :return null
         }
     }
-    console.log(resumeData);
     
 
 
@@ -172,7 +173,7 @@ function Steps() {
                     </Typography>
                     <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                         <Box sx={{ flex: '1 1 auto' }} />
-                        <Button   ref={resetButtonRef}>
+                        <Button onClick={addResume}  ref={resetButtonRef}>
                          FINISH
                         </Button>
                     </Box>
